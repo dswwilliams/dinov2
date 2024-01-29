@@ -65,6 +65,7 @@ class DinoVisionTransformer(nn.Module):
         num_register_tokens=0,
         interpolate_antialias=False,
         interpolate_offset=0.1,
+        lora_rank=None,
     ):
         """
         Args:
@@ -147,6 +148,7 @@ class DinoVisionTransformer(nn.Module):
                 act_layer=act_layer,
                 ffn_layer=ffn_layer,
                 init_values=init_values,
+                lora_rank=lora_rank,
             )
             for i in range(depth)
         ]
